@@ -41,7 +41,8 @@ namespace TaskWebStudent.Controllers
         public IActionResult PostStudent([FromBody] Student student)
         {
             list.Add(student);
-            return Ok("Data Added Successfully");
+            return Ok(new {Message= "Data Added Successfully",Students= student });
+           
         }
 
         //Update the Student Data reference By Id
